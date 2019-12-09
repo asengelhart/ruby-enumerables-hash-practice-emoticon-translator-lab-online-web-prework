@@ -26,5 +26,5 @@ end
 def get_english_meaning(path, jp_emoticon)
   library = load_library(path)
   meaning = library[:get_meaning][jp_emoticon]
-  meaning ? meaning : 
+  meaning ? meaning : "Sorry, that emoticon was not found"
 end
