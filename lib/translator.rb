@@ -4,7 +4,9 @@ require 'yaml'
 def load_library(path)
   basehash = YAML.load_file(path)
   result = {}
-  result['get_meaning'] = {}
+  result['get_meaning'] = basehash.reduce({}) do |memo, (meaning, emoticons)|
+    
+  end 
   
 end
 
