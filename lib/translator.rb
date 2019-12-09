@@ -10,9 +10,11 @@ def load_library(path)
     memo 
   end 
   result[:get_emoticon] = basehash.reduce({}) do |memo, (meaning, emoticons)|
-    
+    (en_emoticon, jp_emoticon) = emoticons
+    memo[en_emoticon] = jp_emoticon
+    memo
   end 
-  
+  result
 end
 
 def get_japanese_emoticon
